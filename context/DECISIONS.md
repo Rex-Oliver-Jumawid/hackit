@@ -69,6 +69,13 @@ Why: Previous pull requests skipped `context/SESSION_CLOSEOUT.md`, causing stale
 Impact: Before opening or merging a pull request, update owning files, log durable decisions, and check that `README.md`, `TEAM_WORKFLOW.md`, `features.md`, `systemflow.md`, `DESIGN.md`, and `context/DECISIONS.md` agree. Stale facts are a review blocker.
 Status: active
 
+## 2026-05-16
+
+Decision: Treat `Frontend/` as the canonical LoanWise app; archive root `src/` after porting loan logic.
+Why: The team ships and pitches from the Figma-based wizard in `Frontend/`, not the legacy single-page `src/` build.
+Impact: All formula and flow work goes in `Frontend/src/lib/` (`loanLogic.ts`, `evaluation.ts`). Read `context/FRONTEND_TEAM_PLAN.md` for lane assignments. Run `cd Frontend && npm run dev`.
+Status: active
+
 ## 2026-05-14
 
 Decision: Build the first website prototype as LoanWise using Vite, React, TypeScript, and optional Supabase email/password auth.
